@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App{
+    main()
+    start()
+}
+
+class ControlList{
+
+}
+
+javafx.Application <|-- App
+
+App -  ControlList
+@enduml
