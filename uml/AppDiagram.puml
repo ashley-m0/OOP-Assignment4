@@ -6,11 +6,16 @@ class App{
     start()
 }
 
-class ControlList{
+class AppController{
+    - ArraList
+}
+
+class menuController{
 
 }
 
 javafx.Application <|-- App
 
-App -  ControlList
+App -  AppController
+AppController - menuController
 @enduml

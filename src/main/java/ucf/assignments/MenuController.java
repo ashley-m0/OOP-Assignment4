@@ -4,7 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 
 public class MenuController {
+
+    //static boolean variable if editTitle was checked
+    //static boolean variable if
+
     public void editTitleChecked(ActionEvent actionEvent) {
+
     }
 
     public void updateListButtonPressed(ActionEvent actionEvent) {
