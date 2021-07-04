@@ -1,7 +1,17 @@
 package ucf.assignments;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 4 Solution
+ *  Copyright 2021 Ashley Mojica
+ */
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 public class MenuController {
 
@@ -54,11 +64,24 @@ public class MenuController {
 
     //Save List to External File Tab
         public void saveOneListChecked(ActionEvent actionEvent) {
+
         }
 
         public void saveAllLIstChecked(ActionEvent actionEvent) {
+
         }
 
         public void saveListButtonPressed(ActionEvent actionEvent) {
+
+        }
+
+    //Universally Used
+        public void okButtonPressed(ActionEvent actionEvent) throws IOException {
+            Parent root = FXMLLoader.load(getClass().getResource("App.fxml"));
+            Scene menuScene = new Scene(root);
+
+            Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            window.setScene(menuScene);
+            window.show();
         }
 }

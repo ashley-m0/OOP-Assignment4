@@ -10,11 +10,12 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="618.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="618.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.MenuController">
   <tabs>
     <Tab text="Edit List">
          <content>
@@ -33,43 +34,74 @@
                   <RowConstraints percentHeight="20.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <CheckBox mnemonicParsing="false" text="Edit Title" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <CheckBox mnemonicParsing="false" onAction="#editTitleChecked" text="Edit Title" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
                   <Separator prefHeight="16.0" prefWidth="618.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" text="Update List" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin></Button>
                   <TextField prefHeight="51.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </TextField>
-                  <ChoiceBox fx:id="editLIstDisplayLists" prefHeight="25.0" prefWidth="494.0" GridPane.columnIndex="1">
+                  <ChoiceBox prefHeight="25.0" prefWidth="494.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </ChoiceBox>
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-                  <CheckBox mnemonicParsing="false"  text="Remove Task" GridPane.rowIndex="4">
+                  <CheckBox mnemonicParsing="false" onAction="#removeTaskChecked" text="Remove Task" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <ChoiceBox fx:id="editListDisplayItems" prefHeight="25.0" prefWidth="481.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <ChoiceBox prefHeight="25.0" prefWidth="481.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </ChoiceBox>
                   <Label text="Select List:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <Button layoutX="356.0" layoutY="17.0" mnemonicParsing="false" onAction="#updateListButtonPressed" text="Update List" />
+                        <Button layoutX="447.0" layoutY="17.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                     </children>
+                  </AnchorPane>
                </children>
             </GridPane>
          </content>
     </Tab>
+      <Tab text="Add List">
+         <content>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" percentWidth="80.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints percentHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints percentHeight="5.0" vgrow="SOMETIMES" />
+                <RowConstraints percentHeight="65.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Label text="Enter Title:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <TextField prefHeight="50.0" prefWidth="499.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Button layoutX="447.0" layoutY="14.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <Button layoutX="373.0" layoutY="14.0" mnemonicParsing="false" onAction="#addListButtonPressed" text="Add List" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </content></Tab>
       <Tab text="Edit Tasks">
          <content>
             <GridPane>
@@ -96,17 +128,17 @@
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </TextField>
-                  <CheckBox mnemonicParsing="false" text="Edit Description" GridPane.rowIndex="5">
+                  <CheckBox mnemonicParsing="false" onAction="#editDescriptionChecked" text="Edit Description" GridPane.rowIndex="5">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Edit Due Date" GridPane.rowIndex="3">
+                  <CheckBox mnemonicParsing="false" onAction="#editDateChecked" text="Edit Due Date" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <DatePicker prefHeight="25.0" prefWidth="267.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <DatePicker onAction="#newDate" prefHeight="25.0" prefWidth="267.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <ChoiceBox prefHeight="25.0" prefWidth="561.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
@@ -119,11 +151,12 @@
                   </ChoiceBox>
                   <Label text="Select List" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Label text="Select Task:" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button mnemonicParsing="false" text="Update Task" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin>
-                  </Button>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <Button layoutX="441.0" layoutY="2.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <Button layoutX="344.0" layoutY="2.0" mnemonicParsing="false" onAction="#updateTaskButtonPressed" text="Update Task" />
+                     </children>
+                  </AnchorPane>
                </children>
             </GridPane>
          </content>
@@ -153,17 +186,12 @@
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </ChoiceBox>
-                  <DatePicker GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <DatePicker onAction="#newDate" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <TextField GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" text="Add Task" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin>
-                  </Button>
                   <Label text="Select List:" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets />
@@ -179,6 +207,12 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </Label>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <Button layoutX="447.0" layoutY="2.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <Button layoutX="370.0" layoutY="2.0" mnemonicParsing="false" onAction="#addTaskButtonPressed" text="Add Task" />
+                     </children>
+                  </AnchorPane>
                </children>
             </GridPane>
          </content>
@@ -205,15 +239,16 @@
                      </GridPane.margin>
                   </TextField>
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" text="Update List(s)" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
-                     <GridPane.margin>
-                        <Insets right="15.0" top="10.0" />
-                     </GridPane.margin>
-                  </Button>
                   <Label text="Enter Absolute Path of File:" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-                  <CheckBox mnemonicParsing="false" text="Single List?" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <CheckBox mnemonicParsing="false" text="Multiple Lists?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <CheckBox mnemonicParsing="false" onAction="#singleListInsertedChecked" text="Single List?" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <CheckBox mnemonicParsing="false" onAction="#multipleListInsertedChecked" text="Multiple Lists?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Button layoutX="386.0" layoutY="2.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <Button layoutX="287.0" layoutY="2.0" mnemonicParsing="false" onAction="#scanListButtonPressed" text="Update List(s)" />
+                     </children>
+                  </AnchorPane>
                </children>
             </GridPane>
          </content>
@@ -242,53 +277,26 @@
                   <Label text="Enter Absolute Path of File:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-                  <CheckBox mnemonicParsing="false" text="Save One List?" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <CheckBox mnemonicParsing="false" onAction="#saveOneListChecked" text="Save One List?" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Save All Lists?" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <CheckBox mnemonicParsing="false" onAction="#saveAllLIstChecked" text="Save All Lists?" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
                   <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" text="Save List(s)" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin>
-                  </Button>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Button layoutX="298.0" layoutY="-2.0" mnemonicParsing="false" onAction="#saveListButtonPressed" text="Save List(s)" />
+                        <Button layoutX="386.0" layoutY="-2.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                     </children>
+                  </AnchorPane>
                </children>
             </GridPane>
          </content>
       </Tab>
-      <Tab text="Add List">
-         <content>
-            <GridPane>
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" percentWidth="20.0" />
-                <ColumnConstraints hgrow="SOMETIMES" percentWidth="80.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints percentHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints percentHeight="5.0" vgrow="SOMETIMES" />
-                <RowConstraints percentHeight="65.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                  <Label text="Enter Title:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button mnemonicParsing="false" text="Add List" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
-                     <GridPane.margin>
-                        <Insets right="15.0" top="10.0" />
-                     </GridPane.margin>
-                  </Button>
-                  <TextField prefHeight="50.0" prefWidth="499.0" GridPane.columnIndex="1">
-                     <GridPane.margin>
-                        <Insets right="15.0" />
-                     </GridPane.margin>
-                  </TextField>
-               </children>
-            </GridPane>
-         </content></Tab>
   </tabs>
 </TabPane>

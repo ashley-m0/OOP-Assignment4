@@ -1,17 +1,30 @@
 package ucf.assignments;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 4 Solution
+ *  Copyright 2021 Ashley Mojica
+ */
+
 public class Task {
 
-    //private String variable for due date
-    //private String variable for description
-    //private boolean variable for whether the task has been completed
+    private String dueDate;
+    private String description;
+    private boolean completed;
 
-    //constructor that takes in string values for the due dat and description
+    public Task(String dueDate, String description){
         //sets private variables to equal the input values
+        //set completed to the default not completed
+    }
 
     //getter for due date
+    public String getDueDate(){
+        return dueDate;
+    }
 
     //setter for due date
+    public void setDueDate(String dueDate){
+
+    }
 
     //getter for description
 

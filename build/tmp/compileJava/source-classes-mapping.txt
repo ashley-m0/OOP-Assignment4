@@ -1,6 +1,10 @@
-ucf/assignments/MenuController.java
- ucf.assignments.MenuController
 ucf/assignments/App.java
  ucf.assignments.App
 ucf/assignments/AppController.java
  ucf.assignments.AppController
+ucf/assignments/List.java
+ ucf.assignments.List
+ucf/assignments/Task.java
+ ucf.assignments.Task
+ucf/assignments/MenuController.java
+ ucf.assignments.MenuController

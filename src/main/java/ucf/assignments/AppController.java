@@ -1,5 +1,10 @@
 package ucf.assignments;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 4 Solution
+ *  Copyright 2021 Ashley Mojica
+ */
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -16,6 +21,8 @@ public class AppController {
         //takes in the list selected by the user
         //takes in the description selected by the user
 
+
+
     }
 
     public void menuButtonPressed(ActionEvent actionEvent) throws IOException {
@@ -28,5 +35,6 @@ public class AppController {
     }
 
     public void changeView(ActionEvent actionEvent) {
+
     }
 }
