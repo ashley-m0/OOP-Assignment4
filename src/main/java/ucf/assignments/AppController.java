@@ -3,5 +3,5 @@ package ucf.assignments;
 import javafx.event.ActionEvent;
 
 
-public class ListController {
+public class AppController {
 }
