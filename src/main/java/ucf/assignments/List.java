@@ -16,7 +16,7 @@ public class List {
         // create new task variable from input information
         // add task to ArrayList
 
-    //getTasks method that takes in an index desired from ArrayList
+    //getTask method that takes in an index desired from ArrayList
         //returns a Task Variable from the index in the ArrayList desired
 
 }

@@ -11,7 +11,11 @@ import java.io.IOException;
 
 
 public class AppController {
-    public void submitTaskCompletedButton(ActionEvent actionEvent) {
+
+    public void taskCompletedButton(ActionEvent actionEvent) {
+        //takes in the list selected by the user
+        //takes in the description selected by the user
+
     }
 
     public void menuButtonPressed(ActionEvent actionEvent) throws IOException {

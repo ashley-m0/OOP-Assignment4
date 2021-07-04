@@ -7,15 +7,44 @@ class App{
 }
 
 class AppController{
-    - ArraList
+    + ListDatabase: ArrayList<List>
+
+    + menuButtonPressed(actionEvent: ActionEvent)
+    + taskCompletedButtonPressed(actionEvent: ActionEvent)
+    + changeView(actionEvent: ActionEvent)
+
+}
+
+class List{
+    - title: String
+    - taskList: ArrayList<Task>
+
+    + getTitle(): String
+    + setTitle(title: String)
+    + addTask(dueDate: String, description: String)
+    + getTask(index: int): Task
 }
 
 class menuController{
 
 }
 
+class Task{
+    - dueDate: String
+    - description: String
+    - completed: boolean
+
+    + getDueDate(): String
+    + setDueDate(dueDate: String)
+    + getDescription(): String
+    + setDescription(description: String)
+    + getCompleted(): boolean
+    + setCompleted(completed: boolean)
+}
+
 javafx.Application <|-- App
 
 App -  AppController
 AppController - menuController
+List - Task
 @enduml
