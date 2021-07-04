@@ -33,17 +33,17 @@
                   <RowConstraints percentHeight="20.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <CheckBox mnemonicParsing="false" onAction="#editTitleSelected" text="Edit Title" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <CheckBox mnemonicParsing="false" text="Edit Title" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
                   <Separator prefHeight="16.0" prefWidth="618.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" onAction="#updateList" text="Update List" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                  <Button mnemonicParsing="false" text="Update List" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin></Button>
-                  <TextField onAction="#editTitle" prefHeight="51.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <TextField prefHeight="51.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -55,7 +55,7 @@
                   </ChoiceBox>
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-                  <CheckBox mnemonicParsing="false" onAction="#removeItemSelected" text="Remove Task" GridPane.rowIndex="4">
+                  <CheckBox mnemonicParsing="false"  text="Remove Task" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
