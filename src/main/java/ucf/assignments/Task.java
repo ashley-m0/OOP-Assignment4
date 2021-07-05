@@ -12,8 +12,9 @@ public class Task {
     private boolean completed;
 
     public Task(String dueDate, String description){
-        //sets private variables to equal the input values
-        //set completed to the default not completed
+        this.dueDate = dueDate;
+        this.description = description;
+        this.completed = false;
     }
 
     //getter for due date
@@ -21,16 +22,27 @@ public class Task {
         return dueDate;
     }
 
-    //setter for due date
     public void setDueDate(String dueDate){
-
+        this.dueDate = dueDate;
     }
 
     //getter for description
+    public String getDescription(){
+        return description;
+    }
 
     //setter for description
+    public void setDescription(String description){
+        this.description = description;
+    }
 
     //getter for completed
+    public boolean getCompleted(){
+        return completed;
+    }
 
     //setter for completed
+    public void setCompleted(boolean completed){
+        this.completed = completed;
+    }
 }

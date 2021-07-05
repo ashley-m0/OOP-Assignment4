@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -40,12 +41,12 @@
                      </GridPane.margin>
                   </CheckBox>
                   <Separator prefHeight="16.0" prefWidth="618.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                  <TextField prefHeight="51.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <TextField fx:id="updateTitleName" prefHeight="51.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </TextField>
-                  <ChoiceBox prefHeight="25.0" prefWidth="494.0" GridPane.columnIndex="1">
+                  <ChoiceBox fx:id="updateList" prefHeight="25.0" prefWidth="494.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -57,7 +58,7 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <ChoiceBox prefHeight="25.0" prefWidth="481.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <ChoiceBox fx:id="deleteTask" prefHeight="25.0" prefWidth="481.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -67,6 +68,7 @@
                      <children>
                         <Button layoutX="356.0" layoutY="17.0" mnemonicParsing="false" onAction="#updateListButtonPressed" text="Update List" />
                         <Button layoutX="447.0" layoutY="17.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <TextArea fx:id="updateListUserMessage" layoutX="88.0" layoutY="11.0" prefHeight="29.0" prefWidth="250.0" />
                      </children>
                   </AnchorPane>
                </children>
@@ -88,7 +90,7 @@
                <children>
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                   <Label text="Enter Title:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <TextField prefHeight="50.0" prefWidth="499.0" GridPane.columnIndex="1">
+                  <TextField fx:id="newTitleName" prefHeight="50.0" prefWidth="499.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -97,6 +99,7 @@
                      <children>
                         <Button layoutX="447.0" layoutY="14.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
                         <Button layoutX="373.0" layoutY="14.0" mnemonicParsing="false" onAction="#addListButtonPressed" text="Add List" />
+                        <TextArea fx:id="addListUserMessage" layoutX="105.0" layoutY="8.0" prefHeight="37.0" prefWidth="250.0" />
                      </children>
                   </AnchorPane>
                </children>
@@ -123,7 +126,7 @@
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="6" />
-                  <TextField GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                  <TextField fx:id="ETEditedDescription" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -138,13 +141,13 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <DatePicker onAction="#newDate" prefHeight="25.0" prefWidth="267.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <ChoiceBox prefHeight="25.0" prefWidth="561.0" GridPane.columnIndex="1">
+                  <DatePicker fx:id="ETSelectedDate" prefHeight="25.0" prefWidth="267.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <ChoiceBox fx:id="ETSelectedList" prefHeight="25.0" prefWidth="561.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </ChoiceBox>
-                  <ChoiceBox prefHeight="25.0" prefWidth="546.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <ChoiceBox fx:id="ETSelectedTask" prefHeight="25.0" prefWidth="546.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -153,8 +156,9 @@
                   <Label text="Select Task:" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
                      <children>
-                        <Button layoutX="441.0" layoutY="2.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
-                        <Button layoutX="344.0" layoutY="2.0" mnemonicParsing="false" onAction="#updateTaskButtonPressed" text="Update Task" />
+                        <Button layoutX="441.0" layoutY="8.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <Button layoutX="345.0" layoutY="8.0" mnemonicParsing="false" onAction="#updateTaskButtonPressed" text="Update Task" />
+                        <TextArea fx:id="ETUserMessage" layoutX="81.0" layoutY="2.0" prefHeight="28.0" prefWidth="250.0" />
                      </children>
                   </AnchorPane>
                </children>
@@ -181,13 +185,13 @@
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-                  <ChoiceBox prefHeight="25.0" prefWidth="510.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                  <ChoiceBox fx:id="ATSelectedList" prefHeight="25.0" prefWidth="510.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </ChoiceBox>
-                  <DatePicker onAction="#newDate" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <TextField GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                  <DatePicker fx:id="ATSelectedDate" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <TextField fx:id="ATEnteredDescription" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -209,15 +213,16 @@
                   </Label>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                      <children>
-                        <Button layoutX="447.0" layoutY="2.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
-                        <Button layoutX="370.0" layoutY="2.0" mnemonicParsing="false" onAction="#addTaskButtonPressed" text="Add Task" />
+                        <Button layoutX="447.0" layoutY="15.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <Button layoutX="367.0" layoutY="15.0" mnemonicParsing="false" onAction="#addTaskButtonPressed" text="Add Task" />
+                        <TextArea fx:id="ATUserMessage" layoutX="105.0" layoutY="9.0" prefHeight="26.0" prefWidth="250.0" />
                      </children>
                   </AnchorPane>
                </children>
             </GridPane>
          </content>
       </Tab>
-      <Tab text="Insert List from External File">
+      <Tab fx:id="ILFilePath" text="Insert List from External File">
          <content>
             <GridPane>
               <columnConstraints>
@@ -245,8 +250,9 @@
                   <CheckBox mnemonicParsing="false" onAction="#multipleListInsertedChecked" text="Multiple Lists?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <children>
-                        <Button layoutX="386.0" layoutY="2.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
-                        <Button layoutX="287.0" layoutY="2.0" mnemonicParsing="false" onAction="#scanListButtonPressed" text="Update List(s)" />
+                        <Button layoutX="386.0" layoutY="15.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <Button layoutX="287.0" layoutY="15.0" mnemonicParsing="false" onAction="#scanListButtonPressed" text="Update List(s)" />
+                        <TextArea fx:id="ILUserMessage" layoutX="26.0" layoutY="9.0" prefHeight="27.0" prefWidth="250.0" />
                      </children>
                   </AnchorPane>
                </children>
@@ -269,7 +275,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                  <TextField fx:id="SLFilePath" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
@@ -282,16 +288,17 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" onAction="#saveAllLIstChecked" text="Save All Lists?" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <CheckBox mnemonicParsing="false" onAction="#saveAllListChecked" text="Save All Lists?" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ChoiceBox fx:id="SLSelectedList" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <children>
-                        <Button layoutX="298.0" layoutY="-2.0" mnemonicParsing="false" onAction="#saveListButtonPressed" text="Save List(s)" />
-                        <Button layoutX="386.0" layoutY="-2.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <Button layoutX="298.0" layoutY="11.0" mnemonicParsing="false" onAction="#saveListButtonPressed" text="Save List(s)" />
+                        <Button layoutX="386.0" layoutY="11.0" mnemonicParsing="false" onAction="#okButtonPressed" text="OK" />
+                        <TextArea fx:id="SLUserMessage" layoutX="31.0" layoutY="5.0" prefHeight="27.0" prefWidth="250.0" />
                      </children>
                   </AnchorPane>
                </children>
