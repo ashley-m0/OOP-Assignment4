@@ -222,7 +222,7 @@
             </GridPane>
          </content>
       </Tab>
-      <Tab fx:id="ILFilePath" text="Insert List from External File">
+      <Tab text="Insert List from External File">
          <content>
             <GridPane>
               <columnConstraints>
@@ -238,7 +238,7 @@
                 <RowConstraints percentHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField prefHeight="47.0" prefWidth="487.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                  <TextField fx:id="ILFilePath" prefHeight="47.0" prefWidth="487.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
