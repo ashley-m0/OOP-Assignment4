@@ -34,6 +34,8 @@ public class MenuTest {
     @Test
     void addTaskCorrectly(){
         //create a mock ArrayList
-        //create string for the
+        //create string for the List, due date, and description
+        //call function
+        //compare ArrayLists to see if the task was added correctly
     }
 }
