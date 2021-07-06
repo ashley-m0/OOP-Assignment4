@@ -58,7 +58,7 @@
                         <Insets left="15.0" />
                      </GridPane.margin>
                   </CheckBox>
-                  <ChoiceBox fx:id="deleteTask" prefHeight="25.0" prefWidth="481.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <ChoiceBox fx:id="removeTaskSelected" prefHeight="25.0" prefWidth="481.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
