@@ -85,7 +85,7 @@
                   <Insets right="15.0" />
                </GridPane.margin>
             </Button>
-            <MenuButton mnemonicParsing="false" onAction="#changeView" prefHeight="25.0" prefWidth="171.0" text="Change View" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+            <MenuButton fx:id="viewChange" mnemonicParsing="false" onAction="#changeView" prefHeight="25.0" prefWidth="171.0" text="Change View" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
                 <MenuItem mnemonicParsing="false" text="Action 2" />

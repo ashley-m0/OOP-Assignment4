@@ -21,14 +21,14 @@ import java.io.IOException;
 public class MenuController {
 
     //Edit List Tab
-        static boolean editTitle;
-        static boolean removeTask;
+        private boolean editTitle;
+        private boolean removeTask;
         @FXML
         private ChoiceBox updateList;
         @FXML
         private TextField updateTitleName;
         @FXML
-        private ChoiceBox deleteTask;
+        private ChoiceBox removeTaskSelected;
         @FXML
         private TextArea updateListUserMessage;
 
@@ -71,8 +71,8 @@ public class MenuController {
         }
 
     //Edit Task Tab
-        static boolean editDescription;
-        static boolean editDueDate;
+        private boolean editDescription;
+        private boolean editDueDate;
         @FXML
         private ChoiceBox ETSelectedList;
         @FXML
@@ -126,8 +126,8 @@ public class MenuController {
         }
 
     //Insert List from External File Tab
-        static boolean singleListInsert;
-        static boolean multipleListInsert;
+        private boolean singleListInsert;
+        private boolean multipleListInsert;
         @FXML
         private TextField ILFilePath;
         @FXML

@@ -27,6 +27,27 @@ class List{
 
 class menuController{
 
+    - editTitle: boolean
+    - removeTask: boolean
+    - updateList: String
+    - updateTitleName: String
+    - removeTaskSelected: String
+    - newTitleName: String
+    - ETSelectedList: String
+    - ETSelectedTask: String
+    - editDueDate: boolean
+    - ETSelectedDate: String
+    - editDescription: boolean
+    -
+
+
+    + okButtonPressed(actionEvent: ActionEvent)
+    + editTitleChecked(actionEvent: ActionEvent)
+    + removeTaskChecked(actionEvent: ActionEvent)
+    + updateListButtonPressed(actionEvent: ActionEvent)
+    + addListButtonClicked(actionEvent: ActionEvent)
+    +
+
 }
 
 class Task{

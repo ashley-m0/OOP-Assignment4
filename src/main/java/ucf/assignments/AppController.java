@@ -5,24 +5,31 @@ package ucf.assignments;
  *  Copyright 2021 Ashley Mojica
  */
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 
 public class AppController {
 
-    public void taskCompletedButton(ActionEvent actionEvent) {
-        //takes in the list selected by the user
-        //takes in the description selected by the user
+    ObservableList<String> views = FXCollections.observableArrayList("Show All Tasks", "Show Only Completed Tasks", "Show Only Uncompleted Tasks");
 
+    @FXML
+    private ChoiceBox viewChange;
 
-
+    @FXML
+    private void initialize(){
+        viewChange.setItems(views);
     }
 
     public void menuButtonPressed(ActionEvent actionEvent) throws IOException {
@@ -34,7 +41,16 @@ public class AppController {
         window.show();
     }
 
+
     public void changeView(ActionEvent actionEvent) {
+
+    }
+
+    public void taskCompletedButton(ActionEvent actionEvent) {
+        //takes in the list selected by the user
+        //takes in the description selected by the user
+
+
 
     }
 }
