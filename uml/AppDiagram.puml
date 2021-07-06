@@ -7,11 +7,17 @@ class App{
 }
 
 class AppController{
-    + ListDatabase: ArrayList<List>
+    - mainList: ArrayList<List>
+    - listSelected: ChoiceBox
+    - taskSelected: ChoiceBox
+    - listScreen: TreeView<String>
+    - initialize()
 
     + menuButtonPressed(actionEvent: ActionEvent)
     + taskCompletedButtonPressed(actionEvent: ActionEvent)
-    + changeView(actionEvent: ActionEvent)
+    + showAllTasksSelected(actionEvent: ActionEvent)
+    + showCompletedTasksSelected(actionEvent: ActionEvent)
+    + showUncompletedTasksSelected(actionEvent: ActionEvent)
 
 }
 
@@ -29,25 +35,49 @@ class menuController{
 
     - editTitle: boolean
     - removeTask: boolean
-    - updateList: String
-    - updateTitleName: String
-    - removeTaskSelected: String
-    - newTitleName: String
-    - ETSelectedList: String
-    - ETSelectedTask: String
+    - updateList: ChoiceBox
+    - updateTitleName: TextField
+    - removeTaskSelected: ChoiceBox
+    - updateListUserMessage: TextArea
+    - newTitleName: TextField
+    - addListUserMessage: TextArea
+    - ETSelectedList: ChoiceBox
+    - ETSelectedTask: ChoiceBox
     - editDueDate: boolean
-    - ETSelectedDate: String
+    - ETSelectedDate: DatePicker
     - editDescription: boolean
-    -
-
+    - ETEditedDescription: TextField
+    - ETUserMessage: TextArea
+    - ATSelectedList: ChoiceBox
+    - ATSelectedDate: DatePicker
+    - ATEnteredDescription: TextField
+    - ATUserMessage: TextArea
+    - singleListInsert: boolean
+    - multipleListInsert: boolean
+    - ILFilePath: TextField
+    - ILUserMessage: TextArea
+    - saveOneList: boolean
+    - saveAllList: boolean
+    - SLFilePath: TextField
+    - SLSelectedList: ChoiceBox
+    - SLUserMessage: TextArea
 
     + okButtonPressed(actionEvent: ActionEvent)
+    + findList(name: String)
     + editTitleChecked(actionEvent: ActionEvent)
     + removeTaskChecked(actionEvent: ActionEvent)
     + updateListButtonPressed(actionEvent: ActionEvent)
-    + addListButtonClicked(actionEvent: ActionEvent)
-    +
-
+    + addListButtonPressed(actionEvent: ActionEvent)
+    + editDescriptionChecked(actionEvent: ActionEvent)
+    + editDueDateChecked(actionEvent: ActionEvent)
+    + updateTaskButtonPressed(actionEvent: ActionEvent)
+    + addTaskButtonPressed(actionEvent: ActionEvent)
+    + singleListInsertedChecked(actionEvent: ActionEvent)
+    + multipleListInsertedChecked(actionEvent: ActionEvent)
+    + scanListButtonPressed(actionEvent: ActionEvent)
+    + saveOneListChecked(actionEvent: ActionEvent)
+    + saveAllListChecked(actionEvent: ActionEvent)
+    + saveListButtonPressed(actionEvent: ActionEvent)
 }
 
 class Task{
